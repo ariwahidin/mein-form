@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Serial Number</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h4>Input Serial Number</h4>
+    <form id="inbound-form">
+        <label for="inboundNumber">Nomor Inbound:</label>
+        <input type="text" id="inboundNumber" name="inboundNumber" required autocomplete="off">
+        <br><br>
+        <label for="serialNumber">Serial Number:</label>
+        <input type="text" id="serialNumber" name="serialNumber" required autocomplete="off">
+        <br><br>
+        <button type="submit">Submit</button>
+        <button type="button" id="btnLihat">Lihat</button>
+        <button type="button" id="downloadBtn">Excel</button>
+    </form>
+    <div class="result">
+        <h2>Submitted Data <span id="totData"></span></h2>
+        <table style="border: solid black;">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>InboundNumber</th>
+                    <th>SerialNumber</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyResult"></tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
